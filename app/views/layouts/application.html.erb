@@ -7,7 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<nav>
+	<ul>
+		<li><%= link_to_unless_current "Home", :action =>"index" %></li>
+		<li><%= link_to_unless_current "About", :action =>"index"%></li>
+		<li><%= link_to_unless_current "Contact", :action =>"contacto"%></li>
+	</ul>
+</nav>
 <%= yield %>
 
 </body>
